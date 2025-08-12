@@ -1,0 +1,101 @@
+/* ===========================
+   CSS Basics & Box Model Demo
+   =========================== */
+
+/* CSS Variables for easy theming */
+:root {
+  --primary: #1abc9c;
+  --primary-dark: #159c86;
+  --nav-bg: #2d3e50;
+  --card-bg: #fff;
+  --body-bg: #f4f4f4;
+  --text: #222;
+  --white: #fff;
+  --shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+}
+
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--body-bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ===========================
+   Navigation Styles
+   =========================== */
+.navbar {
+  background: var(--nav-bg);
+  padding: 16px 0;
+  margin-bottom: 24px;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+.navbar a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.navbar a:hover,
+.navbar a:focus {
+  background: var(--primary);
+  outline: none;
+}
+
+/* ===========================
+   Card Section Styles
+   =========================== */
+.card {
+  background: var(--card-bg);
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  margin: 24px auto;
+  padding: 24px 32px;
+  max-width: 500px;
+  box-shadow: var(--shadow);
+}
+.card h1,
+.card h2 {
+  margin-top: 0;
+  color: var(--primary);
+}
+.card p {
+  margin-bottom: 16px;
+}
+
+/* ===========================
+   Button Styles
+   =========================== */
+.cta-btn {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.cta-btn:hover,
+.cta-btn:focus {
+  background: var(--primary-dark);
+  outline: 2px solid var(--primary-dark);
+  outline-offset: 2px;
+}
